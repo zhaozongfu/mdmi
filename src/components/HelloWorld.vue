@@ -87,7 +87,7 @@ export default {
   methods: {
     butpost() {
       this.$apiPost(
-        "http://47.94.4.201/index.php/index/callcenter/getheaders",
+        "https://www.zzgoodqc.cn/index.php/index/callcenter/getheaders",
         {
           name: "getheaders",
           role: "gets",
@@ -123,11 +123,11 @@ export default {
     },
     uploadImage() {
       // 在这里发送上传请求，例如使用 axios 库发送 POST 请求
-      this.$apiPost('http://47.94.4.201/index.php/index/upload/uploadimg', {
+      this.$apiPost('https://www.zzgoodqc.cn/index.php/index/upload/uploadimg', {
         'imgurl': this.base64Image
       }).then(response => {
         console.log('上传成功：', response);
-        localStorage.setItem('uploadimg', JSON.stringify('http://47.94.4.201/'+response.data.url));
+        localStorage.setItem('uploadimg', JSON.stringify('https://www.zzgoodqc.cn/'+response.data.url));
 
       }).catch(error => {
         console.error('上传失败：', error);
